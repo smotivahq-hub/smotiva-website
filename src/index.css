@@ -1,3 +1,31 @@
 @import "tailwindcss";
 
 /* Global styles go here */
+
+/* --- Custom Font Declarations --- */
+
+/* DM Sans */
+@font-face {
+  font-family: 'DM Sans';
+  font-weight: 400; /* Regular */
+  src: url('./assets/fonts/DMSans-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-weight: 700; /* Bold */
+  src: url('./assets/fonts/DMSans-Bold.ttf') format('ttf');
+}
+
+/* Gilroy */
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 700; /* Bold/Semibold */
+  src: url('./assets/fonts/Gilroy-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 500; /* Medium */
+  src: url('./assets/fonts/Gilroy-Medium.ttf') format('ttf');
+}

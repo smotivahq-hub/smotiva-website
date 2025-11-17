@@ -4,7 +4,7 @@ import WhyChoose from '../components/home/WhyChoose'
 
 export default function Home(){
   return (
-    <div>
+    <div className="font-body">
       <HeroSection />
       <ServicesOverview />
       <WhyChoose />
