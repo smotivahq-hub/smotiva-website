@@ -3,7 +3,7 @@ import TeamSection from '../components/about/TeamSection'
 
 export default function About(){
   return (
-    <div className="font-body">
+    <div>
       <MissionVision />
       <TeamSection />
     </div>

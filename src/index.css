@@ -3,18 +3,22 @@
 /* Global styles go here */
 
 /* --- Custom Font Declarations --- */
+/* src/index.css */
+
+
+/* --- Custom Font Declarations --- */
 
 /* DM Sans */
 @font-face {
   font-family: 'DM Sans';
   font-weight: 400; /* Regular */
-  src: url('./assets/fonts/DMSans-Regular.ttf') format('ttf');
+  src: url('./assets/fonts/DMSans-Regular-BF64376d323f095.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'DM Sans';
   font-weight: 700; /* Bold */
-  src: url('./assets/fonts/DMSans-Bold.ttf') format('ttf');
+  src: url('./assets/fonts/DMSans-Bold-BF64376d32191f2.ttf') format('ttf');
 }
 
 /* Gilroy */
@@ -24,7 +28,7 @@
   src: url('./assets/fonts/Gilroy-Bold.ttf') format('ttf');
 }
 
-@font-face {
+@font-face {  
   font-family: 'Gilroy';
   font-weight: 500; /* Medium */
   src: url('./assets/fonts/Gilroy-Medium.ttf') format('ttf');
