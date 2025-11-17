@@ -3,33 +3,99 @@
 /* Global styles go here */
 
 /* --- Custom Font Declarations --- */
-/* src/index.css */
-
-
-/* --- Custom Font Declarations --- */
 
 /* DM Sans */
 @font-face {
   font-family: 'DM Sans';
   font-weight: 400; /* Regular */
-  src: url('./assets/fonts/DMSans-Regular-BF64376d323f095.ttf') format('ttf');
+  src: url('/src/assets/fonts/DMSans-Regular-BF64376d323f095.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'DM Sans';
   font-weight: 700; /* Bold */
-  src: url('./assets/fonts/DMSans-Bold-BF64376d32191f2.ttf') format('ttf');
+  src: url('/src/assets/fonts/DMSans-Bold-BF64376d32191f2.ttf') format('truetype');
 }
 
 /* Gilroy */
 @font-face {
   font-family: 'Gilroy';
-  font-weight: 700; /* Bold/Semibold */
-  src: url('./assets/fonts/Gilroy-Bold.ttf') format('ttf');
+  font-weight: 700; /* Bold */
+  src: url('/src/assets/fonts/Gilroy-Bold.ttf') format('truetype');
 }
 
 @font-face {  
   font-family: 'Gilroy';
   font-weight: 500; /* Medium */
-  src: url('./assets/fonts/Gilroy-Medium.ttf') format('ttf');
+  src: url('/src/assets/fonts/Gilroy-Medium.ttf') format('truetype');
+}
+
+/* Explicitly define font utility classes */
+@layer components {
+  .font-heading {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+  }
+  
+  .font-body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+  }
+}
+
+/* Custom color utilities */
+@layer utilities {
+  .bg-primary-dark {
+    background-color: #1E3A8A !important;
+  }
+  .bg-secondary-dark {
+    background-color: #1F2937 !important;
+  }
+  .bg-accent-teal {
+    background-color: #00C4CC !important;
+  }
+  .bg-accent-cyan {
+    background-color: #38BDF8 !important;
+  }
+  .bg-accent-light {
+    background-color: #75D0F8 !important;
+  }
+  .bg-neutral-dark {
+    background-color: #101318 !important;
+  }
+  .bg-neutral-gray {
+    background-color: #9CA3AF !important;
+  }
+  .bg-neutral-light {
+    background-color: #E5E7EB !important;
+  }
+  
+  .text-primary-dark {
+    color: #1E3A8A !important;
+  }
+  .text-secondary-dark {
+    color: #1F2937 !important;
+  }
+  .text-accent-teal {
+    color: #00C4CC !important;
+  }
+  .text-accent-cyan {
+    color: #38BDF8 !important;
+  }
+  .text-accent-light {
+    color: #75D0F8 !important;
+  }
+  .text-neutral-dark {
+    color: #101318 !important;
+  }
+  .text-neutral-gray {
+    color: #9CA3AF !important;
+  }
+  .text-neutral-light {
+    color: #E5E7EB !important;
+  }
+  
+  .border-accent-teal {
+    border-color: #00C4CC !important;
+  }
 }

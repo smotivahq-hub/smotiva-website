@@ -5,7 +5,7 @@ export default {
   ],
   theme: {
     extend: {
-        colors: {
+      colors: {
         // Primary Blues (for backgrounds, main elements)
         'primary-dark': '#1E3A8A', // Deep Blue
         'secondary-dark': '#1F2937', // Dark Slate (used in footers/sections)
@@ -20,7 +20,6 @@ export default {
         'neutral-gray': '#9CA3AF', // Medium Gray (for secondary text/borders)
         'neutral-light': '#E5E7EB', // Off-White/Light Gray (for light backgrounds)
       },
-
       fontFamily: {
         // Gilroy for headings and primary attention-grabbing text
         'heading': ['Gilroy', 'sans-serif'],
@@ -29,6 +28,7 @@ export default {
         // You can also define specific weights if needed, e.g., 'dm-sans'
         'dm-sans': ['DM Sans', 'sans-serif'], 
       },
+    
     },
   },    
   plugins: [],  
