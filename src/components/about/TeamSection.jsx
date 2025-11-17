@@ -1,0 +1,14 @@
+export default function TeamSection(){
+  return (
+    <section className="py-12">
+      <div className="max-w-4xl mx-auto">
+        <h3 className="text-2xl font-bold text-white mb-6">Meet the team</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="bg-slate-800 p-4 rounded">Member A</div>
+          <div className="bg-slate-800 p-4 rounded">Member B</div>
+          <div className="bg-slate-800 p-4 rounded">Member C</div>
+        </div>
+      </div>
+    </section>
+  )
+}

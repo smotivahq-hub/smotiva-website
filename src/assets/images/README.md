@@ -1,0 +1,1 @@
+Place local images here (for example: logos, illustrations).
