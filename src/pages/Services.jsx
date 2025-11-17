@@ -1,8 +1,20 @@
-export default function Services(){
+// src/pages/Services.jsx
+import React from 'react';
+import ServicesHero from '../components/services/ServicesHero';
+
+export default function Services() {
   return (
-    <div className="font-body">
-      <h2 className="text-2xl font-bold text-white mb-4 font-heading">Our Services</h2>
-      <p className="text-neutral-light">Details about services will go here.</p>
+    <div className="min-h-screen">
+      {/* --------------------- HERO SECTION --------------------- */}
+      <ServicesHero />
+      {/* -------------------------------------------------------- */}
+      
+      {/* Placeholder for the main Services Grid component */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <h2 className="text-3xl font-heading font-bold text-neutral-dark text-center">
+          Detailed Services Grid Component Next...
+        </h2>
+      </div>
     </div>
-  )
+  );
 }

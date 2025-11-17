@@ -1,23 +1,29 @@
 // src/pages/Home.jsx (Updated)
 import React from 'react';
 import HeroSection from '../components/home/HeroSection';
-import OurExpertise from '../components/home/OurExpertise'; // NEW IMPORT
+import OurExpertise from '../components/home/OurExpertise';
+import CoreServices from '../components/home/CoreServices';
+import IndustriesWeServe from '../components/home/IndustriesWeServe';
+import WhyChooseSmotiva from '../components/home/WhyChooseSmotiva';
+import ClientFeedback from '../components/home/ClientFeedback';
+import HomeCta from '../components/home/HomeCta'; // NEW IMPORT
 
 export default function Home({ onNavigate }) {
   return (
     <div className="min-h-screen">
+      {/* Note: Header is rendered in App.jsx */}
       <HeroSection onNavigate={onNavigate} /> 
-      
-      {/* --------------------- NEW SECTION --------------------- */}
       <OurExpertise />
-      {/* ------------------------------------------------------- */}
+      <CoreServices />
+      <IndustriesWeServe />
+      <WhyChooseSmotiva />
+      <ClientFeedback />
       
-      {/* Placeholder for the next sections: Our Core Services, etc. */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-heading font-bold text-neutral-dark text-center">
-          More Home Page Sections Coming Soon...
-        </h2>
-      </div>
+      {/* --------------------- FINAL CTA SECTION --------------------- */}
+      <HomeCta onNavigate={onNavigate} />
+      {/* ------------------------------------------------------------- */}
+      
+      {/* Note: Footer is rendered in App.jsx */}
     </div>
   );
-}   
+}

@@ -48,7 +48,7 @@ export default function HeroSection({ onNavigate }) {
   };
 
   return (
-    <section className="relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-40 bg-gradient-to-br from-primary-dark to-secondary-dark/90">
+    <section className="relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-40 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <motion.div 
