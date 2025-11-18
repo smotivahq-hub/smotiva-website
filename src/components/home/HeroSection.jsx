@@ -95,7 +95,7 @@ export default function HeroSection() {
 
           {/* Right Column: Image and Visuals */}
           <motion.div 
-            className="lg:col-span-5 xl:col-span-6 flex justify-center lg:justify-end"
+            className="lg:col-span-5 xl:col-span-6 hidden lg:flex justify-center lg:justify-end"
             variants={imageVariant}
           >
              {/* SEO Optimized Placeholder - Describes the image for screen readers and SEO */}

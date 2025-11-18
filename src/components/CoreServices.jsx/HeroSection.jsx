@@ -100,7 +100,7 @@ export default function HeroSection({ onNavigate }) {
 
           {/* Right Column: Image and Visuals */}
           <motion.div 
-            className="lg:col-span-5 xl:col-span-6 flex justify-center lg:justify-end"
+            className="lg:col-span-5 xl:col-span-6 md:flex justify-center lg:justify-end hidden"
             variants={imageVariant} // Apply image variant
           >
              
