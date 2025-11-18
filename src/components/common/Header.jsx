@@ -62,7 +62,7 @@ export default function Header() {
           // State on Scroll: Primary Dark (95% opacity) with blur
           ? 'bg-primary-dark backdrop-blur-md shadow-2xl'
           // Initial State: Primary Dark (20% opacity) with subtle blur
-          : 'bg-primary-dark/20 backdrop-blur-sm shadow-none'
+          : 'bg-primary-dark/20 shadow-none'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,7 +79,7 @@ export default function Header() {
               <img 
                   src="/LOGO WHITE PNG.png" 
                   alt="Smotiva Logo" 
-                  className="h-7 md:w-auto"
+                  className="h-6 md:h-7 md:w-auto"
                   />
             </NavLink>
           </div>

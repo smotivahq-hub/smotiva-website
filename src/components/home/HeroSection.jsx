@@ -1,14 +1,8 @@
-// src/components/home/HeroSection.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
 
-export default function HeroSection({ onNavigate }) {
-
-  const handleNavigation = (page) => {
-    if (onNavigate) {
-      onNavigate(page);
-    }
-  };
+export default function HeroSection() {
 
   // 1. Define Framer Motion Variants for smooth entrance
   const container = {
@@ -48,7 +42,8 @@ export default function HeroSection({ onNavigate }) {
   };
 
   return (
-    <section className="relative overflow-hidden pt-16 pb-28 md:pt-28 md:pb-32 bg-primary-dark">
+    // Note: The Header is fixed/transparent, so we add padding here to ensure content sits below the header's height (h-24)
+    <section className="relative overflow-hidden pt-28 pb-14 md:pt-32 md:pb-32 bg-primary-dark min-h-[600px] md:min-h-[700px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <motion.div 
@@ -61,56 +56,58 @@ export default function HeroSection({ onNavigate }) {
           {/* Left Column: Text Content and CTAs */}
           <div className="lg:col-span-7 xl:col-span-6 text-center lg:text-left mb-12 lg:mb-0">
             
-            {/* Animated Title */}
+            {/* Animated Title (Using UI text) */}
             <motion.h1 
-              variants={item} // Apply item variant
-              className="text-5xl sm:text-6xl lg:text-7xl font-heading font-extrabold text-white mb-6 leading-tighter"
+              variants={item}
+              className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tighter tracking-tight"
             >
-              Smart Creativity <br className="hidden sm:inline" /> 
+              <span className='text-accent-teal'>Smotiva</span> - Smart Creativity <br className="hidden sm:inline" /> 
               for Digital Generation
             </motion.h1>
             
-            {/* Animated Subtext */}
+            {/* Animated Subtext (Using UI text + SEO/Human tweak) */}
             <motion.p 
-              variants={item} // Apply item variant
+              variants={item}
               className="text-xl text-neutral-light/80 font-body mb-10 max-w-xl lg:max-w-full mx-auto lg:mx-0"
             >
-              We are a team of passionate digital experts driving innovation through design, technology, and strategic thinking.
+              We're a creative agency that transforms ideas into visuals, videos, and websites that attract, inspire, and deliver results.
             </motion.p>
 
-            {/* CTA Buttons */}
-            <motion.div 
-              variants={item} // Apply item variant
-              className="flex justify-center lg:justify-start space-x-4"
+            {/* CTA Buttons (Using NavLink) */}
+            <motion.div
+              variants={item}
+              className="flex flex-col lg:flex-row justify-center lg:justify-start items-center w-full gap-3 lg:gap-4"
             >
-              <button
-                onClick={() => handleNavigation('contact')}
-                className="bg-accent-teal hover:bg-opacity-80 text-secondary-dark font-heading font-bold py-3 px-8 rounded-full transition duration-300 shadow-xl text-lg transform hover:-translate-y-0.5"
+              <NavLink
+                to="/contact"
+                className="w-full lg:w-auto text-center bg-accent-teal hover:bg-opacity-80 text-secondary-dark font-heading font-bold py-3 px-8 rounded-lg transition duration-300 shadow-xl text-lg transform hover:-translate-y-0.5"
               >
                 Book a Consultation
-              </button>
-              <button
-                onClick={() => handleNavigation('projects')}
-                className="bg-transparent border-2 border-accent-light text-white font-heading font-semibold py-3 px-8 rounded-full transition duration-300 text-lg hover:bg-accent-light hover:text-secondary-dark"
+              </NavLink>
+              <NavLink
+                to="/projects"
+                className="w-full lg:w-auto text-center bg-transparent border border-accent-light text-white font-heading font-semibold py-3 px-8 rounded-lg transition duration-300 text-lg hover:bg-accent-light hover:text-secondary-dark"
               >
-                Learn More
-              </button>
+                Start a Project
+              </NavLink>
             </motion.div>
           </div>
 
           {/* Right Column: Image and Visuals */}
           <motion.div 
             className="lg:col-span-5 xl:col-span-6 flex justify-center lg:justify-end"
-            variants={imageVariant} // Apply image variant
+            variants={imageVariant}
           >
-             
+             {/* SEO Optimized Placeholder - Describes the image for screen readers and SEO */}
+             <div className="relative w-full max-w-sm lg:max-w-md h-auto">
+              </div>
           </motion.div>
         </motion.div>
       </div>
       
       {/* Background Shape Overlay */}
       <div className="absolute inset-0 opacity-10">
-        {/* SVG code for background shape remains here */}
+         {/* SVG code for background shape remains here */}
       </div>
     </section>
   );
