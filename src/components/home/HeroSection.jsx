@@ -43,7 +43,7 @@ export default function HeroSection() {
 
   return (
     // Note: The Header is fixed/transparent, so we add padding here to ensure content sits below the header's height (h-24)
-    <section className="relative overflow-hidden pt-28 pb-14 md:pt-32 md:pb-32 bg-primary-dark min-h-[600px] md:min-h-[700px]">
+    <section className="relative overflow-hidden pt-32 pb-18 md:pt-20 md:pb-0 bg-primary-dark min-h-[600px] md:min-h-[250px] lg:min-h-[700px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <motion.div 
@@ -59,7 +59,7 @@ export default function HeroSection() {
             {/* Animated Title (Using UI text) */}
             <motion.h1 
               variants={item}
-              className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tighter tracking-tight"
+              className="text-4xl sm:text-6xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tighter tracking-tight"
             >
               <span className='text-accent-teal'>Smotiva</span> - Smart Creativity <br className="hidden sm:inline" /> 
               for Digital Generation
@@ -76,7 +76,7 @@ export default function HeroSection() {
             {/* CTA Buttons (Using NavLink) */}
             <motion.div
               variants={item}
-              className="flex flex-col lg:flex-row justify-center lg:justify-start items-center w-full gap-3 lg:gap-4"
+              className="flex flex-col md:flex-row lg:flex-row justify-center lg:justify-start items-center w-full gap-3 lg:gap-4"
             >
               <NavLink
                 to="/contact"
@@ -99,8 +99,13 @@ export default function HeroSection() {
             variants={imageVariant}
           >
              {/* SEO Optimized Placeholder - Describes the image for screen readers and SEO */}
-             <div className="relative w-full max-w-sm lg:max-w-md h-auto">
-              </div>
+             <div className="relative w-full max-w-md lg:max-w-2xl h-auto">
+               <img
+                 src="/images/Hue_Saturation 1.png"
+                 alt="beautiful-black-woman-with-afro-curls-hairstyle-smiling-model-sweater-trendy-jeans-clothes"
+                 className="w-full md:w-[720px] h-auto object-contain mx-auto"
+               />
+             </div>
           </motion.div>
         </motion.div>
       </div>

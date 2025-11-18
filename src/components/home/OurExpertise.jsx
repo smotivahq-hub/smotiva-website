@@ -1,4 +1,3 @@
-// src/components/home/OurExpertise.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -8,27 +7,23 @@ import { Lightbulb, Code, Users, TrendingUp } from 'lucide-react'; // Using rele
 const expertiseData = [
   {
     icon: Lightbulb,
-    title: 'Digital Strategy',
-    description: 'We craft comprehensive digital roadmaps tailored to your long-term business goals, ensuring maximum impact and measurable ROI.',
-    color: 'accent-teal',
+    title: 'Digital Strategy & Consulting',
+    description: 'We craft data-driven roadmaps and strategic plans tailored to your long-term business goals, ensuring maximum impact and measurable ROI.',
   },
   {
     icon: Code,
-    title: 'Innovative Technology',
-    description: 'Building custom software, web platforms, and mobile apps using cutting-edge, scalable, and secure technology stacks.',
-    color: 'accent-cyan',
+    title: 'Innovative Technology Solutions',
+    description: 'Building custom software, high-performance web platforms, and mobile apps using scalable and secure modern technology stacks.',
   },
   {
     icon: Users,
-    title: 'Brand Experience Design',
-    description: 'Creating visually stunning and user-centric interfaces and identity systems that captivate audiences and foster loyalty.',
-    color: 'primary-dark',
+    title: 'Brand Experience Design (UX/UI)',
+    description: 'Creating visually stunning and user-centric interfaces and identity systems that captivate audiences and foster lasting loyalty.',
   },
   {
     icon: TrendingUp,
-    title: 'Growth & Optimization',
-    description: 'Data-driven marketing and performance optimization services focused on scaling your visibility and revenue streams.',
-    color: 'neutral-gray',
+    title: 'Performance & Growth Marketing',
+    description: 'Data-driven marketing and optimization services focused on rapidly scaling your visibility, traffic, and revenue streams.',
   },
 ];
 
@@ -55,19 +50,21 @@ const itemVariants = {
   },
 };
 
-const ExpertiseCard = ({ icon: Icon, title, description, color }) => {
+const ExpertiseCard = ({ icon: Icon, title, description }) => {
   return (
-    <motion.div variants={itemVariants} className="p-8 rounded-xl shadow-2xl bg-white border-b-4 border-l-2" 
-      // Dynamic border color based on the card's accent
-      style={{ borderColor: color === 'primary-dark' ? '#1E3A8A' : color === 'accent-teal' ? '#00C4CC' : color === 'accent-cyan' ? '#38BDF8' : '#9CA3AF' }}
+    <motion.div 
+      variants={itemVariants} 
+      // CRITICAL FIX: Consistent border on all sides (border-2 border-accent-teal)
+      className="p-8 rounded-xl shadow-2xl bg-white border-2 border-accent-teal/50 hover:border-accent-teal transition duration-300 transform hover:scale-[1.02]"
     >
-      <div className={`text-${color} mb-4`}>
-        <Icon size={40} className={`text-${color}`} style={{ color: color === 'primary-dark' ? '#1E3A8A' : color === 'accent-teal' ? '#00C4CC' : color === 'accent-cyan' ? '#38BDF8' : '#9CA3AF' }}/>
+      <div className="mb-4">
+        {/* CRITICAL FIX: Icon uses direct Tailwind color (text-accent-teal) */}
+        <Icon size={40} className="text-accent-teal" />
       </div>
-      <h3 className="text-xl font-heading font-bold text-neutral-dark mb-3">
+      <h3 className="text-xl font-heading font-bold text-primary-dark mb-3">
         {title}
       </h3>
-      <p className="text-neutral-gray font-body text-sm leading-relaxed">
+      <p className="text-neutral-gray font-body text-base leading-relaxed">
         {description}
       </p>
     </motion.div>
@@ -83,21 +80,22 @@ export default function OurExpertise() {
   });
 
   return (
-    <section className="py-20 bg-neutral-light">
+    // CRITICAL FIX: Changed background to bg-white for a cleaner look
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading */}
+        {/* Section Heading with SEO/Human Copy */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-heading font-extrabold text-neutral-dark mb-2">
-            Our Expertise
+          <h2 className="text-4xl font-heading font-extrabold text-primary-dark mb-2">
+            Core Digital Expertise: Driving Strategy and Results
           </h2>
           <p className="text-lg font-body text-neutral-gray max-w-2xl mx-auto">
-            We focus on core disciplines that ensure your brand is not just visible, but dominant and future-proof.
+            Our approach fuses strategic thinking, innovative technology, and creative design to build **digital brands** that are not only visible today but are also positioned for future growth and market dominance.
           </p>
         </motion.div>
 
