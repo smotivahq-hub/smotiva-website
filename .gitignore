@@ -6,3 +6,4 @@ dist/
 # Local Netlify folder
 # Local Netlify folder (removed since using Vercel)
 .netlify
+.vercel
