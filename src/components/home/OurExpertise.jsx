@@ -91,8 +91,8 @@ export default function OurExpertise() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-heading font-extrabold text-primary-dark mb-2">
-            Core Digital Expertise: Driving Strategy and Results
+          <h2 className="text-4xl font-heading font-extrabold text-primary-dark mb-2 tracking-tight">
+            Our Expertise
           </h2>
           <p className="text-lg font-body text-neutral-gray max-w-2xl mx-auto">
             Our approach fuses strategic thinking, innovative technology, and creative design to build **digital brands** that are not only visible today but are also positioned for future growth and market dominance.
