@@ -110,10 +110,10 @@ const ServiceItem = ({ service, index }) => {
       
       {/* Text Content - Renders second on left, first on right */}
       <div className={`order-2 ${isOdd ? 'md:order-1' : 'md:order-2'}`}>
-        <h3 className="text-2xl font-heading font-bold text-primary-dark mb-3">
+        <h3 className="text-xl font-heading font-bold text-primary-dark mb-3">
           {service.title}
         </h3>
-        <p className="text-neutral-gray font-body text-base leading-relaxed mb-4">
+        <p className="text-neutral-gray font-body text-sm leading-relaxed mb-4">
           {service.description}
         </p>
         
@@ -160,10 +160,10 @@ export default function CoreServices() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-heading font-extrabold text-primary-dark mb-2 tracking-tight">
-            Our Core Services: Integrated Digital Solutions
+            Our Core Services
           </h2>
           <p className="text-lg font-body text-neutral-gray max-w-xl mx-auto">
-            From visionary **brand identity** to robust **digital solutions**, we offer an integrated suite of services designed to achieve exceptional, measurable results for every client.
+            From visionary brand identity to robust digital solutions, we offer an integrated suite of services designed to achieve exceptional, measurable results for every client.
           </p>
         </motion.div>
 

@@ -63,7 +63,7 @@ const itemVariants = {
 
 const IndustryCard = ({ icon: Icon, title, description }) => {
   return (
-    <motion.div variants={itemVariants} className="p-6 text-center rounded-xl bg-secondary-dark/80 border-2 border-accent-teal/50 transition-all duration-300 hover:bg-secondary-dark hover:border-accent-teal cursor-default shadow-lg">
+    <motion.div variants={itemVariants} className="p-4 text-center rounded-xl bg-secondary-dark/80 border-2 border-accent-teal/50 transition-all duration-300 hover:bg-secondary-dark hover:border-accent-teal cursor-default shadow-lg">
       <div className="flex flex-col items-center mb-4 h-full">
         {/* Icon Circle */}
         <div className="p-3 inline-flex items-center justify-center rounded-full border-2 border-accent-cyan/50 text-accent-teal transition duration-300 group-hover:text-accent-cyan mb-3">
@@ -71,12 +71,12 @@ const IndustryCard = ({ icon: Icon, title, description }) => {
         </div>
         
         {/* Title */}
-        <h3 className="text-lg font-heading font-semibold text-white mb-2">
+        <h3 className="text-md font-heading font-semibold text-white mb-2 leading-tighter">
           {title}
         </h3>
         
         {/* Description (New SEO/Human Content) */}
-        <p className="text-sm font-body text-neutral-gray flex-grow">
+        <p className="text-xs font-body text-neutral-gray flex-grow">
             {description}
         </p>
       </div>
@@ -105,7 +105,7 @@ export default function IndustriesWeServe() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-heading font-extrabold text-white mb-2">
-            Industries We Serve: Targeted Digital Impact
+            Industries We Serve
           </h2>
           <p className="text-lg font-body text-neutral-gray max-w-2xl mx-auto">
             Our expertise is leveraged across **key industry sectors**, delivering custom digital transformation solutions that meet the unique needs and challenges of your domain.

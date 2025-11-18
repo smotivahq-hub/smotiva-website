@@ -102,7 +102,7 @@ const ServiceCard = ({ service }) => {
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-heading font-bold text-accent-teal mb-2">
+        <h3 className="text-lg font-heading font-bold text-accent-teal mb-2">
           {service.title}
         </h3>
         <p className="text-neutral-light/80 font-body text-sm mb-4 leading-relaxed">
