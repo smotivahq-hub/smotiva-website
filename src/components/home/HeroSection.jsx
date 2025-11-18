@@ -62,7 +62,7 @@ export default function HeroSection() {
               className="text-4xl sm:text-6xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tighter tracking-tight"
             >
               <span className='text-accent-teal'>Smotiva</span> - Godswill ### Smart Creativity <br className="hidden sm:inline" /> 
-              for Digital Generation
+              for Digital Generation ####
             </motion.h1>
             
             {/* Animated Subtext (Using UI text + SEO/Human tweak) */}
