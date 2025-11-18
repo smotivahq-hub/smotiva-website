@@ -34,7 +34,7 @@ export default function BlogHero() {
           animate={inView ? "visible" : "hidden"}
           className="text-6xl font-heading font-extrabold mb-4"
         >
-          Blog
+          Blog Page
         </motion.h1>
         
         {/* Subtitle / Description (kept minimal as per the UI) */}
