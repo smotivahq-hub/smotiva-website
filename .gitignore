@@ -4,4 +4,5 @@ dist/
 .DS_Store
 
 # Local Netlify folder
+# Local Netlify folder (removed since using Vercel)
 .netlify
