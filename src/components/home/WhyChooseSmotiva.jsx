@@ -95,7 +95,7 @@ export default function WhyChooseSmotiva() {
                             variants={itemVariants}
                             className="flex items-start font-body text-neutral-dark text-lg"
                         >
-                            <CheckCircle size={24} className="text-accent-teal flex-shrink-0 mt-1 mr-3" />
+                            <CheckCircle size={24} className="text-accent-teal shrink-0 mt-1 mr-3" />
                             <span>{benefit}</span>
                         </motion.li>
                     ))}

@@ -1,22 +1,25 @@
 // src/components/common/Header.jsx
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // For clean mobile icons
+import { NavLink, useNavigate } from 'react-router-dom'
 
 // Navigation items configuration
 const navItems = [
-  { name: 'Home', page: 'home' },
-  { name: 'About', page: 'about' },
-  { name: 'Services', page: 'services' },
-  { name: 'Projects', page: 'projects' },
-  { name: 'Blog', page: 'blog' },
+  { name: 'Home', page: 'home', to: '/' },
+  { name: 'About', page: 'about', to: '/about' },
+  { name: 'Services', page: 'services', to: '/services' },
+  { name: 'Projects', page: 'projects', to: '/projects' },
+  { name: 'Blog', page: 'blog', to: '/blog' },
 ];
 
 export default function Header({ onNavigate }) {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate()
 
   // Handles navigation and ensures the mobile menu closes after selection
-  const handleNavigation = (page) => {
-    onNavigate(page);
+  const handleNavigation = (page, to) => {
+    if (onNavigate) onNavigate(page);
+    if (to) navigate(to);
     setIsOpen(false);
   };
 
@@ -26,44 +29,46 @@ export default function Header({ onNavigate }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
-          {/* Logo/Brand Name */}
-          <div className="shrink-0">
-            <a 
-              href="#" 
-              onClick={() => handleNavigation('home')}
-              className="text-3xl font-heading font-extrabold text-white tracking-widest cursor-pointer hover:text-accent-teal transition duration-300 transform hover:scale-105"
-            >
-              Smotiva
-            </a>
-          </div>
+          {/* Logo/Brand Brand */}
+                <div className="shrink-0">
+                <a 
+                  href="#" 
+                  onClick={() => handleNavigation('home')}
+                  className="cursor-pointer hover:opacity-80 transition duration-300 transform hover:scale-105"
+                >
+                  <img 
+                  src="/LOGO WHITE PNG.png" 
+                  alt="Smotiva Logo" 
+                  className="h-7 w-auto"
+                  />
+                </a>
+                </div>
 
-          {/* Desktop Navigation & CTA */}
+                {/* Desktop Navigation & CTA */}
           <div className="hidden md:flex items-center space-x-10">
             <nav>
               <ul className="flex space-x-8 font-body">
                 {navItems.map((item) => (
                   <li key={item.name}>
-                    <a
-                      href={`#${item.page}`}
-                      onClick={() => handleNavigation(item.page)}
-                      className="text-neutral-light hover:text-accent-teal transition duration-300 relative group text-base font-medium uppercase tracking-wider py-2"
+                    <NavLink
+                      to={item.to}
+                      className={({ isActive }) =>
+                        `relative text-base font-medium tracking-tight py-2 transition duration-300 ${isActive ? 'text-accent-teal' : 'text-neutral-light hover:text-accent-teal'}`
+                      }
+                      onClick={() => handleNavigation(item.page, item.to)}
                     >
                       {item.name}
-                      {/* Premium underline effect */}
                       <span className="absolute bottom-0 left-0 w-full h-[3px] bg-accent-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                    </a>
+                    </NavLink>
                   </li>
                 ))}
               </ul>
             </nav>
             
             {/* Contact CTA Button (Teal Accent) */}
-            <button
-              onClick={() => handleNavigation('contact')}
-              className="bg-accent-teal hover:bg-opacity-80 text-secondary-dark font-heading font-bold py-2.5 px-7 rounded-full transition duration-300 shadow-xl text-base transform hover:-translate-y-0.5 border-2 border-accent-teal"
-            >
+            <NavLink to="/contact" onClick={() => handleNavigation('contact', '/contact')} className="bg-accent-teal hover:bg-opacity-80 text-secondary-dark font-heading font-bold py-2.5 px-7 rounded-full transition duration-300 shadow-xl text-base transform hover:-translate-y-0.5 border-2 border-accent-teal inline-flex items-center justify-center">
               Contact Us
-            </button>
+            </NavLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -87,14 +92,14 @@ export default function Header({ onNavigate }) {
       >
         <div className="px-4 space-y-3">
           {navItems.map((item) => (
-            <a
+            <NavLink
               key={item.name}
-              href={`#${item.page}`}
-              onClick={() => handleNavigation(item.page)}
+              to={item.to}
+              onClick={() => handleNavigation(item.page, item.to)}
               className="block text-white font-body text-lg uppercase tracking-wider px-3 py-3 rounded-lg hover:bg-primary-dark transition duration-300 hover:text-accent-teal"
             >
               {item.name}
-            </a>
+            </NavLink>
           ))}
           {/* Mobile Contact Button */}
           <button

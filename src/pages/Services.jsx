@@ -1,20 +1,20 @@
-// src/pages/Services.jsx
+// src/pages/Services.jsx (Updated)
 import React from 'react';
 import ServicesHero from '../components/services/ServicesHero';
+import ServicesGrid from '../components/services/ServicesGrid'; // NEW IMPORT
+import HomeCta from '../components/home/HomeCta'; // Reusing the CTA
 
-export default function Services() {
+export default function Services({ onNavigate }) {
   return (
     <div className="min-h-screen">
-      {/* --------------------- HERO SECTION --------------------- */}
       <ServicesHero />
-      {/* -------------------------------------------------------- */}
       
-      {/* Placeholder for the main Services Grid component */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-heading font-bold text-neutral-dark text-center">
-          Detailed Services Grid Component Next...
-        </h2>
-      </div>
+      {/* --------------------- SERVICES GRID --------------------- */}
+      <ServicesGrid />
+      {/* --------------------------------------------------------- */}
+      
+      {/* The Services page UI includes the standard CTA at the bottom */}
+      <HomeCta onNavigate={onNavigate} /> 
     </div>
   );
 }

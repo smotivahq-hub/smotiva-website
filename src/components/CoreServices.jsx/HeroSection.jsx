@@ -48,7 +48,7 @@ export default function HeroSection({ onNavigate }) {
   };
 
   return (
-    <section className="relative overflow-hidden pt-16 pb-28 md:pt-28 md:pb-32 bg-primary-dark">
+    <section className="relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-40 bg-linear-to-br from-primary-dark to-secondary-dark/90">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <motion.div 
@@ -64,10 +64,10 @@ export default function HeroSection({ onNavigate }) {
             {/* Animated Title */}
             <motion.h1 
               variants={item} // Apply item variant
-              className="text-5xl sm:text-6xl lg:text-7xl font-heading font-extrabold text-white mb-6 leading-tighter"
+              className="text-5xl sm:text-6xl lg:text-7xl font-heading font-extrabold text-white mb-6 leading-tight"
             >
               Smart Creativity <br className="hidden sm:inline" /> 
-              for Digital Generation
+              for Digital Generation.
             </motion.h1>
             
             {/* Animated Subtext */}

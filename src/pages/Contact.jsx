@@ -1,8 +1,19 @@
-export default function Contact(){
+// src/pages/Contact.jsx (Updated)
+import React from 'react';
+import ContactHero from '../components/contact/ContactHero';
+import ContactForm from '../components/contact/ContactForm'; // NEW IMPORT
+import HomeCta from '../components/home/HomeCta';
+
+export default function Contact({ onNavigate }) {
   return (
-    <div className="font-body">
-      <h2 className="text-2xl font-bold text-white mb-4 font-heading">Contact</h2>
-      <p className="text-neutral-light">Contact form or contact details go here.</p>
+    <div className="min-h-screen">
+      <ContactHero onNavigate={onNavigate} />
+      
+      {/* --------------------- CONTACT FORM --------------------- */}
+      <ContactForm />
+      {/* -------------------------------------------------------- */}
+      
+      <HomeCta onNavigate={onNavigate} /> 
     </div>
-  )
+  );
 }

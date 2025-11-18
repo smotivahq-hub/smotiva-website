@@ -1,8 +1,19 @@
-export default function Blog(){
+// src/pages/Blog.jsx (Updated)
+import React from 'react';
+import BlogHero from '../components/blog/BlogHero';
+import BlogGrid from '../components/blog/BlogGrid'; // NEW IMPORT
+import HomeCta from '../components/home/HomeCta'; 
+
+export default function Blog({ onNavigate }) {
   return (
-    <div className="font-body">
-      <h2 className="text-2xl font-bold text-white mb-4 font-heading">Blog</h2>
-      <p className="text-neutral-light">Blog posts will be listed here.</p>
+    <div className="min-h-screen">
+      <BlogHero />
+      
+      {/* --------------------- BLOG GRID --------------------- */}
+      <BlogGrid />
+      {/* ----------------------------------------------------- */}
+      
+      <HomeCta onNavigate={onNavigate} /> 
     </div>
-  )
+  );
 }

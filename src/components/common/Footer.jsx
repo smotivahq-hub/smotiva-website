@@ -44,12 +44,17 @@ export default function Footer({ onNavigate }) {
             
             {/* Column 1: Logo and Mission */}
             <div className="col-span-2 md:col-span-2">
-              <h3 
-                onClick={() => handleNavigation('home')}
-                className="text-3xl font-heading font-extrabold text-white tracking-widest mb-4 cursor-pointer hover:text-accent-teal transition duration-300"
-              >
-                Smotiva
-              </h3>
+                              <a 
+                  href="#" 
+                  onClick={() => handleNavigation('home')}
+                  className="cursor-pointer hover:opacity-80 transition duration-300 transform hover:scale-105 "
+                >
+                  <img 
+                  src="/LOGO WHITE PNG.png" 
+                  alt="Smotiva Logo" 
+                  className="h-7 md: w-auto mb-4"
+                  />
+                </a>
               <p className="text-neutral-gray font-body text-sm leading-relaxed max-w-sm">
                 Smotiva is a forward-thinking innovation and design company that leverages technology, creativity, and motivational strategies to empower people, businesses, and communities.
               </p>
@@ -103,17 +108,17 @@ export default function Footer({ onNavigate }) {
               </h4>
               <ul className="space-y-3 font-body text-base">
                 <li className="flex items-start text-neutral-gray">
-                  <MapPin size={18} className="text-accent-teal mr-3 mt-1 flex-shrink-0" />
+                  <MapPin size={18} className="text-accent-teal mr-3 mt-1 shrink-0" />
                   <p>Abuja, Nigeria</p>
                 </li>
                 <li className="flex items-start">
-                  <Phone size={18} className="text-accent-teal mr-3 mt-1 flex-shrink-0" />
+                  <Phone size={18} className="text-accent-teal mr-3 mt-1 shrink-0" />
                   <a href="tel:+2348037038180" className="text-neutral-gray hover:text-accent-teal transition duration-200">
                     +234 803 703 8180
                   </a>
                 </li>
                 <li className="flex items-start">
-                  <Mail size={18} className="text-accent-teal mr-3 mt-1 flex-shrink-0" />
+                  <Mail size={18} className="text-accent-teal mr-3 mt-1 shrink-0" />
                   <a href="mailto:info@smotiva.com" className="text-neutral-gray hover:text-accent-teal transition duration-200">
                     info@smotiva.com
                   </a>

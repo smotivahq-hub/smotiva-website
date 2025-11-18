@@ -50,7 +50,7 @@ const sectionVariants = {
 const TestimonialCard = ({ quote, name, title }) => (
   // Force fixed width for carousel effect, but allow flex-shrink to be 0
   <motion.div 
-    className="flex-shrink-0 w-80 sm:w-96 p-8 bg-white rounded-xl shadow-2xl border-t-4 border-accent-teal/50 transition duration-300 hover:border-accent-teal hover:shadow-3xl"
+    className="shrink-0 w-80 sm:w-96 p-8 bg-white rounded-xl shadow-2xl border-t-4 border-accent-teal/50 transition duration-300 hover:border-accent-teal hover:shadow-3xl"
     initial={{ opacity: 0, scale: 0.9 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5 }}

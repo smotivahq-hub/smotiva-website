@@ -53,7 +53,7 @@ export default function HomeCta({ onNavigate }) {
           <div className="flex justify-center space-x-4">
             <button
               onClick={() => handleNavigation('contact')}
-              className="bg-accent-teal hover:bg-opacity-80 text-secondary-dark font-heading font-bold py-3 px-8 rounded-full transition duration-300 shadow-2xl text-lg transform hover:translate-y-[-2px] border-2 border-accent-teal"
+              className="bg-accent-teal hover:bg-opacity-80 text-secondary-dark font-heading font-bold py-3 px-8 rounded-full transition duration-300 shadow-2xl text-lg transform hover:-translate-y-0.5 border-2 border-accent-teal"
             >
               Book a Consultation
             </button>
