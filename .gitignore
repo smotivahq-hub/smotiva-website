@@ -4,6 +4,6 @@ dist/
 .DS_Store
 
 # Local Netlify folder
-# Local Netlify folder (removed since using Vercel)
+# Local vendor folders (ignored to avoid committing local CLI state)
 .netlify
 .vercel
