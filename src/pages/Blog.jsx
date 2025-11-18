@@ -6,7 +6,7 @@ import HomeCta from '../components/home/HomeCta';
 
 export default function Blog({ onNavigate }) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       <BlogHero />
       
       {/* --------------------- BLOG GRID --------------------- */}

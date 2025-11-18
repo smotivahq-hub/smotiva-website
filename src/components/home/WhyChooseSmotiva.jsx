@@ -1,17 +1,30 @@
-// src/components/home/WhyChooseSmotiva.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { CheckCircle } from 'lucide-react'; 
+import { CheckCircle, Play } from 'lucide-react'; 
 
-// Data for the benefits list
+// Data matching the exact list items from the "Why Smotiva.jpg" UI
 const benefits = [
-  'Deep industry insight and strategic consulting.',
-  'Commitment to measurable results and ROI.',
-  'Nigerian creativity blended with global standards.',
-  'Agile and transparent development processes.',
-  'Dedicated post-launch support and maintenance.',
-  'Innovative solutions tailored to future scalability.',
+  { 
+    title: 'Purpose-Driven Design', 
+    description: 'Every project starts with a clear motive – your end goal. We ensure design serves a strategic business purpose.',
+  },
+  {
+    title: 'Professional Delivery',
+    description: 'We maintain global creative standards blended with deep local Nigerian insight, delivering world-class quality without compromise.',
+  },
+  {
+    title: 'Innovation & Growth',
+    description: 'Our team constantly learns, adapts, and evolves with the latest design and technology trends to keep your brand future-proof.',
+  },
+  {
+    title: 'Affordable Quality',
+    description: 'We deliver professional, high-impact digital results without demanding a premium budget, optimizing resources for maximum ROI.',
+  },
+  {
+    title: 'Timeliness & Discipline',
+    description: 'We respect your time and project deadlines rigorously, ensuring reliable delivery exactly when promised.',
+  },
 ];
 
 // Framer Motion Variants for the overall section
@@ -59,10 +72,10 @@ export default function WhyChooseSmotiva() {
   });
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-neutral-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading */}
+        {/* Section Heading with SEO/Human Copy */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +87,7 @@ export default function WhyChooseSmotiva() {
             Why Choose Smotiva
           </h2>
           <p className="text-lg font-body text-neutral-gray max-w-xl mx-auto">
-            Our unique value proposition and commitment to excellence set us apart from the competition.
+            Discover the key differentiators that make us the ideal partner for your digital transformation journey in Nigeria and beyond.
           </p>
         </motion.div>
 
@@ -86,17 +99,22 @@ export default function WhyChooseSmotiva() {
                 variants={containerVariants}
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
-                className="p-8 rounded-xl border border-accent-cyan/30 bg-neutral-light/50"
+                // Cleaned up border/background for better visibility
+                className="p-8 rounded-xl border-4 border-accent-teal/50 bg-white shadow-xl"
             >
-                <ul className="space-y-5">
+                <ul className="space-y-6">
                     {benefits.map((benefit, index) => (
                         <motion.li 
                             key={index}
                             variants={itemVariants}
-                            className="flex items-start font-body text-neutral-dark text-lg"
+                            className="flex items-start font-body text-neutral-dark text-base"
                         >
-                            <CheckCircle size={24} className="text-accent-teal shrink-0 mt-1 mr-3" />
-                            <span>{benefit}</span>
+                            {/* Premium Icon/Bullet: Uses small teal triangle for clean visual style */}
+                            <Play size={16} fill="#00C4CC" strokeWidth={0} className="text-accent-teal shrink-0 mt-1 mr-3 transform rotate-90" />
+                            <div>
+                                <h3 className="font-bold text-lg text-primary-dark mb-0.5">{benefit.title}</h3>
+                                <p className="text-neutral-gray">{benefit.description}</p>
+                            </div>
                         </motion.li>
                     ))}
                 </ul>
@@ -104,16 +122,18 @@ export default function WhyChooseSmotiva() {
 
             {/* Right Column: Branded Visual */}
             <motion.div
-                variants={imageVariant}
-                initial="hidden"
-                animate={inView ? "visible" : "hidden"}
-                className="p-4 flex justify-center lg:justify-end"
+              variants={imageVariant}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              className="relative hidden lg:block p-4"
             >
-                <div className="relative w-full max-w-md h-96 rounded-xl overflow-hidden shadow-2xl">
-                    
-                    {/* Optional: Add a subtle overlay for a graphic design feel */}
-                    <div className="absolute inset-0 bg-primary-dark/10 mix-blend-multiply pointer-events-none"></div>
-                </div>
+              {/* Large unboxed image positioned to the right for a modern layout */}
+              <img
+                src="/images/handsome-african-business-man-standing-trendy-formal-black-suit-guy-with-beard-wearing-blue-long-sleeve-sweater.png"
+                alt="A confident Nigerian professional man in business casual attire smiling, representing Smotiva's trusted partnership."
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 w-[420px] md:w-[520px] lg:w-[720px] xl:w-[880px] h-auto object-contain pointer-events-none"
+                onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x600/1E3A8A/FFFFFF?text=Smotiva+Image+Error"; }}
+              />
             </motion.div>
         </div>
       </div>

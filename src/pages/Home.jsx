@@ -10,7 +10,7 @@ import HomeCta from '../components/home/HomeCta'; // NEW IMPORT
 
 export default function Home({ onNavigate }) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       {/* Note: Header is rendered in App.jsx */}
       <HeroSection onNavigate={onNavigate} /> 
       <OurExpertise />

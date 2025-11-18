@@ -6,7 +6,7 @@ import HomeCta from '../components/home/HomeCta';
 
 export default function Contact({ onNavigate }) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       <ContactHero onNavigate={onNavigate} />
       
       {/* --------------------- CONTACT FORM --------------------- */}

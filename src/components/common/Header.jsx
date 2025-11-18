@@ -57,7 +57,7 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 overflow-x-hidden ${
         scrolled
           // State on Scroll: Primary Dark (95% opacity) with blur
           ? 'bg-primary-dark backdrop-blur-md shadow-2xl'
@@ -70,7 +70,7 @@ export default function Header() {
         <div className={`flex justify-between items-center transition-all duration-300 ${scrolled ? 'h-16 md:h-16' : 'h-16 md:h-20'}`}>
           
           {/* Logo/Brand Name */}
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <NavLink
               to="/"
               onClick={handleCloseMenu}
@@ -79,7 +79,7 @@ export default function Header() {
               <img 
                   src="/LOGO WHITE PNG.png" 
                   alt="Smotiva Logo" 
-                  className="h-6 md:h-7 md:w-auto"
+                  className="h-6 md:h-7 md:w-auto max-w-full"
                   />
             </NavLink>
           </div>

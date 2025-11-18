@@ -6,7 +6,7 @@ import HomeCta from '../components/home/HomeCta'; // Reusing the CTA
 
 export default function Services({ onNavigate }) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       <ServicesHero />
       
       {/* --------------------- SERVICES GRID --------------------- */}

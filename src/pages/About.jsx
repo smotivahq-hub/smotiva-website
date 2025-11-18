@@ -7,7 +7,7 @@ import HomeCta from '../components/home/HomeCta';
 
 export default function About({ onNavigate }) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       <AboutHero />
       <MissionVisionValues />
       
