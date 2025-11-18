@@ -96,7 +96,7 @@ export default function Header({ onNavigate }) {
               key={item.name}
               to={item.to}
               onClick={() => handleNavigation(item.page, item.to)}
-              className="block text-white font-body text-lg uppercase tracking-wider px-3 py-3 rounded-lg hover:bg-primary-dark transition duration-300 hover:text-accent-teal"
+              className="block text-white font-body text-lg tracking-tight px-3 py-3 rounded-lg hover:bg-primary-dark transition duration-300 hover:text-accent-teal"
             >
               {item.name}
             </NavLink>
