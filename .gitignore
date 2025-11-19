@@ -2,8 +2,3 @@ node_modules/
 dist/
 .env
 .DS_Store
-
-# Local Netlify folder
-# Local vendor folders (ignored to avoid committing local CLI state)
-.netlify
-.vercel

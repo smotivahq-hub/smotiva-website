@@ -113,7 +113,7 @@ export default function Header() {
             <NavLink 
               to="/contact" 
               onClick={handleCloseMenu} 
-              className="bg-accent-teal hover:bg-opacity-80 text-secondary-dark font-heading font-bold py-[7px] px-7 rounded-lg transition duration-300 text-base transform hover:translate-y-[-2px] border-2 border-accent-teal inline-flex items-center justify-center"
+              className="bg-accent-teal hover:bg-opacity-80 text-secondary-dark font-heading font-bold py-[7px] px-7 rounded-lg transition duration-300 text-base transform hover:-translate-y-0.5 border-2 border-accent-teal inline-flex items-center justify-center"
             >
               Contact Us
             </NavLink>
